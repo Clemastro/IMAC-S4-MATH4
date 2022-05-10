@@ -1,17 +1,14 @@
 #include <iostream>
-#include "Random/Binomiale.hpp"
-#include "Random/Geometry.hpp"
-#include "Random/random_skills.hpp"
+#include "Random/random_classe.hpp"
 
 int main()
 {
-    bool stop = false;
-    char ans;
+    bool   stop = false;
+    char   ans;
+    Classe classe;
     while (!stop) {
-        Skill skill = pick_a_random_skill("Magie", 0.8);
-        std::cout << skill << std::endl;
-
-        //std::cout << geometry(0.1) << std::endl;
+        classe = pick_a_random_classe();
+        std::cout << classe << std::endl;
 
         std::cout << "Dice ? (O/n)\n";
         std::cin >> ans;
