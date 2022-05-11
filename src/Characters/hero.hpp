@@ -5,21 +5,21 @@
 #include <string>
 
 //intern include
+#include "classe.hpp"
 #include "vilain.hpp"
 
 //This class define the character of the player
 class Hero {
 private:
     //--Attribut
-    std::string classe;
-    int         pv;
-    int         pm;
-    std::string weapon;
-    int         level;
+    Classe classe;
+    int    pv;
+    int    pm;
+    int    level;
 
 public:
     //--Constructor
-    Hero() = default;
+    Hero();
 
     //--Methods
     void levelUP();
@@ -38,7 +38,12 @@ public:
 
     inline int getLevel() const
     {
-        return pv;
+        return level;
+    }
+
+    inline Classe getClasse() const
+    {
+        return classe;
     }
 
     //--Afficheur
@@ -47,6 +52,7 @@ public:
         os << "LEVEL : " << hero.getLevel() << std::endl;
         os << "PV    : " << hero.getPV() << std::endl;
         os << "PM    : " << hero.getPM() << std::endl;
+        os << "CLASS : " << hero.getClasse().getName() << std::endl;
 
         return os;
     }

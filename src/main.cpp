@@ -1,14 +1,13 @@
 #include <iostream>
-#include "Random/random_classe.hpp"
+#include "Characters/hero.hpp"
 
 int main()
 {
-    bool   stop = false;
-    char   ans;
-    Classe classe;
+    bool stop = false;
+    char ans;
     while (!stop) {
-        classe = pick_a_random_classe();
-        std::cout << classe << std::endl;
+        Hero hero;
+        std::cout << hero << std::endl;
 
         std::cout << "Dice ? (O/n)\n";
         std::cin >> ans;
