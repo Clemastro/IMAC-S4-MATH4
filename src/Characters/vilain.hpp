@@ -8,9 +8,9 @@ class Vilain {
 private:
     //--Attribut
     std::string name;
-    int         pv;
-    int         degat;
-    int         level;
+    // int         pv;
+    // int         degat;
+    // int         level;
 
 public:
     //--Constructor
