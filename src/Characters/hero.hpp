@@ -23,7 +23,7 @@ public:
 
     //--Methods
     void levelUP();
-    void attackVilain(Vilain vilain);
+    void removePV(int degat);
 
     //--Getters/Setters
     inline int getPV() const

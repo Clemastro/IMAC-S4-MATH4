@@ -6,6 +6,13 @@
 //intern include
 #include "../Random/random_uniform_int.hpp"
 
+Skill::Skill()
+{
+    name  = "none";
+    type  = "none";
+    degat = -1;
+}
+
 Skill::Skill(std::string _name, std::string _type)
     : name(_name), type(_type)
 {

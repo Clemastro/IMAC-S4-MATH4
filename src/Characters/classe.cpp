@@ -29,3 +29,10 @@ void Classe::add_rand_skill(int nb_of_skill)
         }
     }
 }
+
+void Classe::coutSkills()
+{
+    for (auto const& skill : skills) {
+        std::cout << skill << std::endl;
+    }
+}

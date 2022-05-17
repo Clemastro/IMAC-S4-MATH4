@@ -39,12 +39,19 @@ public:
         return skills;
     }
 
+    inline Skill getSkill(int id) const
+    {
+        return skills[id];
+    }
+
     inline void addSkill(Skill skill)
     {
         skills.push_back(skill);
     }
 
     //--Afficheur
+    void coutSkills();
+
     friend std::ostream& operator<<(std::ostream& os, const Classe& classe)
     {
         os << "Name   : " << classe.getName() << std::endl;

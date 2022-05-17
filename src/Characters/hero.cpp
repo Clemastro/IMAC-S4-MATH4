@@ -14,3 +14,11 @@ void Hero::levelUP()
 {
     level++;
 }
+
+void Hero::removePV(int degat)
+{
+    pv = pv - degat;
+    if (pv < 0) {
+        pv = 0;
+    }
+}

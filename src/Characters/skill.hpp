@@ -13,7 +13,7 @@ private:
 
 public:
     //--constructor
-    Skill() = default;
+    Skill();
     Skill(std::string _name, std::string _type);
     Skill(std::string _name, std::string _type, int _degat);
 
