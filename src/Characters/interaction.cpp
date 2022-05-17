@@ -9,3 +9,9 @@ void Hero_attack_Vilain(Hero& hero, Vilain& vilain)
         vilain.removePV(choosen_skill.getDegat());
     }
 }
+
+void Vilain_attack_Hero(Vilain& vilain, Hero& hero)
+{
+    std::cout << "Vilain attack !\n";
+    hero.removePV(vilain.getDEG());
+}

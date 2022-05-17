@@ -21,6 +21,9 @@ int main()
         if (ans == 'o') {
             Hero_attack_Vilain(hero, vilain);
         }
+        else {
+            Vilain_attack_Hero(vilain, hero);
+        }
 
         std::cout << "Dice ? (O/n)\n";
         std::cin >> ans;
