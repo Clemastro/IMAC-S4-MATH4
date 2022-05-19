@@ -22,3 +22,8 @@ void Hero::removePV(int degat)
         pv = 0;
     }
 }
+
+void Hero::heal(int _pv)
+{
+    pv = pv + _pv;
+}

@@ -24,6 +24,7 @@ public:
     //--Methods
     void levelUP();
     void removePV(int degat);
+    void heal(int _pv);
 
     //--Getters/Setters
     inline int getPV() const

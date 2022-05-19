@@ -11,6 +11,7 @@ private:
     int pv;
     int degat;
     int level;
+    int malus;
 
 public:
     //--Constructor
@@ -19,6 +20,10 @@ public:
 
     //Methode
     void removePV(int degat);
+    void addMalus(int penality)
+    {
+        malus = penality;
+    }
 
     //--Getters
     inline int getPV() const
@@ -34,6 +39,13 @@ public:
     inline int getLevel() const
     {
         return level;
+    }
+
+    inline int getMalus()
+    {
+        int penality = malus;
+        malus        = 0;
+        return penality;
     }
 
     //--Afficheur
