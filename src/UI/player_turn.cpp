@@ -28,7 +28,7 @@ void player_turn(Hero& hero, Vilain& vilain)
 
         case Action::defense:
             std::cout << "You prepare yourself against the vilain\n";
-            vilain.addMalus(vilain.getLevel() * 3);
+            vilain.addMalus(hero.getLevel() * 3 + 1);
             have_play = true;
             break;
 

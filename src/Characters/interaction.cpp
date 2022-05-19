@@ -16,6 +16,13 @@ bool Hero_attack_Vilain(const Hero& hero, Vilain& vilain)
 
 void Vilain_attack_Hero(Vilain& vilain, Hero& hero)
 {
-    std::cout << "Vilain attack !\n";
-    hero.removePV(vilain.getDEG());
+    int vilain_degat = vilain.getDEG() - vilain.getMalus();
+    if (vilain_degat < 0) {
+        vilain_degat = 0;
+        std::cout << "You dodge the vilain !\n";
+    }
+    else {
+        std::cout << "You recieve " << vilain_degat << " damage\n";
+    }
+    hero.removePV(vilain_degat);
 }

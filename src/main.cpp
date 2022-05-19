@@ -3,6 +3,7 @@
 #include "Characters/interaction.hpp"
 #include "Characters/vilain.hpp"
 #include "UI/player_turn.hpp"
+#include "UI/vilain_turn.hpp"
 
 int main()
 {
@@ -18,6 +19,7 @@ int main()
         std::cout << vilain << std::endl;
 
         player_turn(hero, vilain);
+        vilain_turn(hero, vilain);
 
         std::cout << "Dice ? (O/n)\n";
         std::cin >> ans;
