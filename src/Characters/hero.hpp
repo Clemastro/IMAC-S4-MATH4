@@ -25,6 +25,7 @@ public:
     void levelUP();
     void removePV(int degat);
     void heal(int _pv);
+    bool is_dead();
 
     //--Getters/Setters
     inline int getPV() const

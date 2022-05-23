@@ -27,3 +27,13 @@ void Hero::heal(int _pv)
 {
     pv = pv + _pv;
 }
+
+bool Hero::is_dead()
+{
+    if (pv == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}

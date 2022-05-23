@@ -17,3 +17,13 @@ void Vilain::removePV(int _degat)
         pv = 0;
     }
 }
+
+bool Vilain::is_dead()
+{
+    if (pv == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}

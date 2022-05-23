@@ -24,6 +24,7 @@ public:
     {
         malus = penality;
     }
+    bool is_dead();
 
     //--Getters
     inline int getPV() const

@@ -23,6 +23,6 @@ void Vilain_attack_Hero(Vilain& vilain, Hero& hero)
     }
     else {
         std::cout << "You recieve " << vilain_degat << " damage\n";
+        hero.removePV(vilain_degat);
     }
-    hero.removePV(vilain_degat);
 }
