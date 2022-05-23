@@ -1,12 +1,12 @@
 #include "vilain.hpp"
-#include "../Random/Geometry.hpp"
-#include "../Random/random_uniform_int.hpp"
+#include "../Random/Exponentielle.hpp"
+#include "../Random/Normale.hpp"
 
 Vilain::Vilain(int _level, float p)
 {
-    level = _level + geometry(p);
-    pv    = level * random_uniform_int(1, level);
-    degat = level * random_uniform_int(1, 1 + int(level / 2));
+    level = _level + exponentielle(0.6);
+    pv    = normale(level * 3, 10 * (level / 2));
+    degat = normale(level * 2, 10 * (level / 2));
     malus = 0;
 }
 

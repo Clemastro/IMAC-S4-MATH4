@@ -25,6 +25,8 @@ public:
     void levelUP();
     void removePV(int degat);
     void heal(int _pv);
+    void receivePM(int _pm);
+    void removePM(int _pm);
     bool is_dead();
 
     //--Getters/Setters
