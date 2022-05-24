@@ -6,16 +6,21 @@
 //intern include
 #include "../Characters/skill.hpp"
 #include "Bernoulli.hpp"
+#include "Binomiale.hpp"
+#include "Geometry.hpp"
 #include "random_uniform_int.hpp"
 
 Skill pick_a_random_skill(std::string type, float p)
 {
     std::vector<Skill> skills = {
-        Skill("Rayons laser", "Magie"),
         Skill("Coup d'épée", "Mélée"),
         Skill("Bélier blindé", "Mélée"),
+        Skill("Coup de bouclier", "Tank"),
+        Skill("Charge de fer", "Tank"),
         Skill("Pluie de flèches", "Distance"),
+        Skill("Tir téléguidé", "Distance"),
         Skill("Tire de glace", "Magie"),
+        Skill("Rayons laser", "Magie"),
     };
 
     if (type != "all" && p == -1) {
@@ -34,6 +39,14 @@ Skill pick_a_random_skill(std::string type, float p)
             while (rand.getType() != type) {
                 rand = skills[random_uniform_int(0, skills.size() - 1)];
             }
+        }
+        if (rand.getType() == type) {
+            rand.setDegat(binomiale(15, 0.8));
+            rand.setConso(1 + geometry(0.5));
+        }
+        else {
+            rand.setDegat(binomiale(10, 0.5));
+            rand.setConso(1 + geometry(0.8));
         }
         return rand;
     }

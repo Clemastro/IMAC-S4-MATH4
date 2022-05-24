@@ -35,6 +35,7 @@ void player_turn(Hero& hero, Vilain& vilain)
         default: break;
         }
     }
+    hero.receivePM(1);
 }
 
 Action action_selection()

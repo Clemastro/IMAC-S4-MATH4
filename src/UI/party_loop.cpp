@@ -17,7 +17,7 @@ void party_loop()
     Hero hero;
 
     //create first vilain
-    Vilain vilain(0, 0.3);
+    Vilain vilain(0, 0.9);
 
     bool stop_the_game = false;
     while (!stop_the_game) {
@@ -33,7 +33,7 @@ void party_loop()
             std::cout << "You level up ! LEVEL " << hero.getLevel() << " --> LEVEL " << hero.getLevel() + 1;
             hero.levelUP();
             std::cout << "\nA new Vilain appear !\n";
-            Vilain new_vilain(hero.getLevel(), 0.4);
+            Vilain new_vilain(hero.getLevel(), 0.6);
             vilain = new_vilain;
         }
 

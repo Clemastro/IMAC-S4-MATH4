@@ -10,7 +10,7 @@ Classe::Classe(std::string _name, std::string _type)
 void Classe::add_rand_skill(int nb_of_skill)
 {
     for (int i = 0; i < nb_of_skill; i++) {
-        if (skills.size() < 4) {
+        if (skills.size() < 9) {
             Skill new_skill;
             bool  is_already_in = true;
             while (is_already_in) {

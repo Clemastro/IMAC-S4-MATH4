@@ -10,12 +10,13 @@ private:
     std::string name;
     std::string type;
     int         degat;
+    int         conso_pm;
 
 public:
     //--constructor
     Skill();
     Skill(std::string _name, std::string _type);
-    Skill(std::string _name, std::string _type, int _degat);
+    Skill(std::string _name, std::string _type, int _degat, int _conso_pm);
 
     //--methods
     void useSkill();
@@ -36,9 +37,19 @@ public:
         return degat;
     }
 
+    inline int getConso() const
+    {
+        return conso_pm;
+    }
+
     inline void setDegat(int value)
     {
         degat = value;
+    }
+
+    inline void setConso(int value)
+    {
+        conso_pm = value;
     }
 
     //--Afficheur

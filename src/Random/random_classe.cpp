@@ -11,6 +11,7 @@ Classe pick_a_random_classe()
     std::vector<Classe> classes = {
         Classe("Archer", "Distance"),
         Classe("Barbare", "Mélée"),
+        Classe("Paladin", "Tank"),
         Classe("Mage", "Magie"),
     };
 

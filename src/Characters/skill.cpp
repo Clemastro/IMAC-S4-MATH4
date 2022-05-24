@@ -19,7 +19,7 @@ Skill::Skill(std::string _name, std::string _type)
     degat = random_uniform_int(0, 10);
 }
 
-Skill::Skill(std::string _name, std::string _type, int _degat)
-    : name(_name), type(_type), degat(_degat)
+Skill::Skill(std::string _name, std::string _type, int _degat, int _conso_pm)
+    : name(_name), type(_type), degat(_degat), conso_pm(_conso_pm)
 {
 }

@@ -14,11 +14,12 @@ Hero::Hero()
 void Hero::levelUP()
 {
     level++;
-    heal(level * 1.5);
-    receivePM(level * 2);
+    heal(level * 2);
+    receivePM(1);
     if (level % 5 == 0) {
         classe.add_rand_skill();
-        std::cout << "You receive a new skill ! --> " << classe.getSkill(classe.getSkills().size() - 1);
+        std::cout << "\nYou receive a new skill !:\n"
+                  << classe.getSkill(classe.getSkills().size() - 1);
     }
 }
 

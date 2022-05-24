@@ -4,9 +4,12 @@
 
 Vilain::Vilain(int _level, float p)
 {
-    level = _level + exponentielle(0.6);
+    level = _level + exponentielle(p);
     pv    = normale(level * 3, 10 * (level / 2));
     degat = normale(level * 2, 10 * (level / 2));
+    if (degat < 0) {
+        degat = 0;
+    }
     malus = 0;
 }
 
