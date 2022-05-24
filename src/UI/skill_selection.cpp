@@ -4,7 +4,7 @@
 Skill skill_selection(std::vector<Skill> skills)
 {
     for (size_t i = 1; i < skills.size(); i++) {
-        std::cout << " " << i << ": " << skills[i].getName() << "(" << skills[i].getDegat() << "pv|" << skills[i].getConso() << "pm) |";
+        std::cout << " " << i << ": " << skills[i].getName() << "(" << skills[i].getDegat() << " DEG|" << skills[i].getConso() << " PM) |";
     }
 
     std::cout << "\n "

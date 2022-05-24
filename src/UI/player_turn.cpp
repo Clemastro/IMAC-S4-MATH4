@@ -5,6 +5,7 @@
 
 //intern include
 #include "../Characters/interaction.hpp"
+#include "../Random/Normale.hpp"
 #include "get_input_from_user.hpp"
 
 void player_turn(Hero& hero, Vilain& vilain)
@@ -21,14 +22,16 @@ void player_turn(Hero& hero, Vilain& vilain)
             break;
 
         case Action::heal:
-            hero.heal(hero.getLevel() * 2 + 1);
-            std::cout << "You recieve " << hero.getLevel() * 2 + 1 << " PV\n";
+            hero.heal(hero.getLevel() * 10 + hero.getPM());
+            std::cout << "You recieve " << hero.getLevel() * 10 + hero.getPM() << " PV\n";
+            std::cout << "It cost " << (int)(hero.getPM() / 1.5) << " PM\n";
+            hero.removePM(hero.getPM() / 1.5);
             have_play = true;
             break;
 
         case Action::defense:
             std::cout << "You prepare yourself against the vilain\n";
-            vilain.addMalus(hero.getLevel() * 3 + 1);
+            vilain.addMalus(hero.getLevel() * 3 + normale(0, vilain.getLevel()));
             have_play = true;
             break;
 

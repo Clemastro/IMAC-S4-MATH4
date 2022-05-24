@@ -34,7 +34,7 @@ public:
         return type;
     }
 
-    inline std::vector<Skill> getSkills() const
+    inline std::vector<Skill>& getSkills()
     {
         return skills;
     }

@@ -15,9 +15,11 @@ void Hero::levelUP()
 {
     level++;
     heal(level * 2);
-    receivePM(1);
     if (level % 5 == 0) {
         classe.add_rand_skill();
+        for (auto& skill : classe.getSkills()) {
+            skill.setDegat(skill.getDegat() + level * (level / 5));
+        }
         std::cout << "\nYou receive a new skill !:\n"
                   << classe.getSkill(classe.getSkills().size() - 1);
     }

@@ -42,7 +42,7 @@ Skill pick_a_random_skill(std::string type, float p)
         }
         if (rand.getType() == type) {
             rand.setDegat(binomiale(15, 0.8));
-            rand.setConso(1 + geometry(0.5));
+            rand.setConso(2 + geometry(0.3));
         }
         else {
             rand.setDegat(binomiale(10, 0.5));
